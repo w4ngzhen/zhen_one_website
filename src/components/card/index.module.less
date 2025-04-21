@@ -3,16 +3,41 @@
   height: 100%;
   border-radius: 12px;
   border: 1px solid black;
+  transition: box-shadow 0.3s ease;
+  padding: 32px;
+
+  .desc {
+    margin-left: 4px;
+    opacity: 0;
+    font-size: 12px;
+    transition: opacity 0.3s ease;
+    color: #999;
+  }
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+
+    .desc {
+      opacity: 1;
+    }
+  }
 
   .title {
-
+    margin: 0 0 12px 0;
+    font-size: 16px;
   }
 
   .url {
+    all: unset;
     cursor: pointer;
 
+    &:hover {
+      border-bottom: 1px solid;
+      cursor: pointer;
+    }
+
     &.disabled {
-      cursor: default;
+      cursor: not-allowed;
     }
   }
 }

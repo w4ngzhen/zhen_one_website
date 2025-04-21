@@ -1,5 +1,5 @@
 export interface SiteInfo {
-  url: string;
   title: string;
+  url: { display: string; target: string } | string;
   disabled?: boolean;
 }
